@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: rgb(80, 119, 246);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+button {
+    padding: 10px 15px;
+    width: 150px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background: rgb(80, 119, 246);
+    color: rgb(235,235,235);
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+span {
+    font-size: 5rem;
+    margin: 50px;
+}
+
+h2 {
+    margin-bottom: 50px;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+button:active{
+    background: black;
+    transform: scale(0.9);
+}
+
+.container {
+    background: rgb(235,235,235);
+    padding: 15px;
+    border-radius: 10px;
+    min-width: 600px;
+    text-align: center;
+}
+
+.players-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.score-container {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

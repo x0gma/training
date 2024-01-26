@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pierre, feuille , ciseaux</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="players-container">
+            <div class="player">
+                <h2>Vous</h2>
+                <span id="playerChoice"></span>
+            </div>
+            <div class="computer">
+                <h2>Ordinateur</h2>
+                <span id="computerChoice"></span>
+            </div>
+        </div>
+        <div class="button-container">
+            <button class="btn" id="btn0">Pierre</button>
+            <button class="btn" id="btn1">Feuille</button>
+            <button class="btn" id="btn2">Ciseaux</button>
+        </div>
+        <div class="score-container">
+            <h3 id="playerScoreDisplay">Votre score :</h3>
+            <h3 id="computerScoreDisplay">Computeur score :</h3>
+        </div>
+        <h4 id="winChecker"></h4>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
