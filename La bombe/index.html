@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La bombe</title>
+
+    <link rel="shortcut icon" href="./assets/img/112683.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style/index.css">
+</head>
+<body id="body">
+    <header>
+        <h1>La bombe</h1>
+        <button id="startDefusing">Commencer à désamorcer</button>
+    </header>
+    <div class="bomb-container">
+        <div class="bomb-header">
+            <div class="left-light-container">
+                <div class="left-light light"></div>
+            </div>
+            <div class="timer-container">
+                <p class="timer">00 : 00</p>
+            </div>
+            <div class="right-light-container">
+                <div class="right-light light"></div>
+            </div>
+        </div>
+        <div class="module-container">
+            <div class="module1 module">
+                <p id="module1Question"></p>
+                <input type="text" id="module1Answer">
+                <button id="module1Submit">Valider votre réponse</button>
+            </div>
+            <div class="module2 module"></div>
+            <div class="module3 module"></div>
+            <div class="module4 module"></div>
+        </div>
+    </div>
+    <div class="defuseBtn-container">
+        <div class="submit-button">
+            <button id="finalSubmit">TRY</button>
+        </div>
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>

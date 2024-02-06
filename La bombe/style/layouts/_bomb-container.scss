@@ -1,0 +1,97 @@
+.bomb-container {
+  height: 80vh;
+  width: 60vw;
+  margin: 50px auto 0;
+  background: grey;
+
+  .bomb-header {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    background: rgb(71, 71, 71);
+    height: 20%;
+
+    .timer {
+      color: white;
+      font-size: 5rem;
+    }
+
+    .left-light-container {
+        height: 100%;
+        width: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .left-light {
+            height: 115px;
+            width: 115px;
+            margin: 0 auto;
+            border-radius: 100px;
+            background: green;
+        }
+    }
+
+    .right-light-container {
+        height: 100%;
+        width: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .right-light {
+            height: 115px;
+            width: 115px;
+            margin: 0 auto;
+            border-radius: 100px;
+            background: green;
+        }
+    }
+  }  
+
+  .module-container {
+    height: 80%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    .module {
+        border: 1px solid black;
+    }
+
+    .module1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        flex-direction: column;
+        opacity: 0;
+    }
+  }
+
+}
+.defuseBtn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .submit-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black ;
+        height: 100px;
+        width: 100px;
+        background: grey;
+
+        button {
+            height: 75px;
+            width: 75px;
+            border-radius: 100px;
+            background: red;
+        }
+    }
+
+}
