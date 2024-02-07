@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -28,6 +29,11 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+header span {
+  margin: 15px;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 .bomb-container {
@@ -120,6 +126,24 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   opacity: 0;
+}
+.bomb-container .module-container .module2 {
+  opacity: 0;
+}
+.bomb-container .module-container .module2 .wire-img {
+  background: url(../assets/img/Fils\ connectés.png) center/contain no-repeat;
+  height: 350px;
+}
+.bomb-container .module-container .module2 .checkbox {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .defuseBtn-container {

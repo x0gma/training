@@ -69,7 +69,25 @@
         flex-direction: column;
         opacity: 0;
     }
+
+    .module2 {
+        opacity: 0;
+        .wire-img{
+            background: url(../assets/img/Fils\ connectés.png) center/contain no-repeat;
+            height: 350px;
+
+        }
+
+        .checkbox {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
   }
+
+
 
 }
 .defuseBtn-container {

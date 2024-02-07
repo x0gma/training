@@ -3,4 +3,10 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+    span {
+        margin: 15px;
+        font-size: 2rem;
+        cursor: pointer;
+    }
 }
