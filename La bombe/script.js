@@ -1,4 +1,4 @@
-// Constantes et variables
+// //////////////////////////////////////// Constantes et variables////////////////////////////////////////////////////////
 const body = document.getElementById("body");
 const timer = document.querySelector(".timer");
 const startBtn = document.getElementById("startDefusing");
@@ -20,35 +20,39 @@ const module1Question = document.getElementById("module1Question");
 const module1AnswerData = document.getElementById("module1Answer");
 const module1Submit = document.getElementById("module1Submit");
 const module2 = document.querySelector(".module2");
+const module3 = document.querySelector(".module3");
+const module3Submit = document.getElementById("module3Btn");
+const module3Light = document.querySelector(".module3Light");
 const finalSubmit = document.getElementById("finalSubmit");
 let isAudioMuted = false;
 let module1IsSolved = false,
   module2IsSolved = false,
-  module3IsSolved = true,
+  module3IsSolved = false,
   module4IsSolved = true;
 let module1Answer,
   a1 = Math.floor(Math.random() * 100),
   b1 = Math.floor(Math.random() * 100);
 let timeout,
-  totalSeconds = 60,
-  firstExeStart = true,
-  firstExeFinal = true;
+  totalSeconds = 10;
+(firstExeStart = true),
+  (firstExeFinal = true),
+  (firstExeModule2 = true),
+  (firstExeModule3 = true);
 
-// Fonction pour activer ou désactiver tous les sons
+// //////////////////////////////////////////////////////// Fonction pour activer ou désactiver tous les sons ////////////////////////////////////////////////////////
 const toggleAudioMute = () => {
   volume.innerHTML = `<span><i class="fa-solid ${
-    isAudioMuted ? "fa-volume-xmark" : "fa-volume-high"
+    isAudioMuted ? "fa-volume-high" : "fa-volume-xmark"
   }"></i></span>`;
   audio1.volume = audio2.volume = audio3.volume = isAudioMuted ? 1 : 0;
   isAudioMuted = !isAudioMuted;
 };
 
-// Ajoutez un gestionnaire d'événement au bouton de volume
 volume.addEventListener("click", toggleAudioMute);
 
-// Fonction pour afficher le compte à rebours
+// //////////////////////////////////////////////////////// Compte à rebours////////////////////////////////////////////////////////
 const timeDisplay = () => {
-  if (totalSeconds < 0) {
+  if (totalSeconds <= 0) {
     clearTimeout(timeout);
     finalSubmit.style.background =
       body.style.background =
@@ -81,7 +85,7 @@ const timeDisplay = () => {
   timeout = setTimeout(timeDisplay, 1000);
 };
 
-// Module 1
+// ////////////////////////////////////////////////////////Module 1////////////////////////////////////////////////////////
 const module1App = () => {
   module1Question.innerHTML = `${a1} + ${b1} ?`;
 };
@@ -98,8 +102,7 @@ module1Submit.addEventListener("click", () => {
   module1IsSolved = parseInt(module1Answer) === a1 + b1;
 });
 
-// Module 2
-let firstExeModule2 = true;
+// ////////////////////////////////////////////////////////Module 2///////////////////////////////////////////////////////
 
 radioButtons.forEach((radio) => {
   radio.addEventListener("change", (e) => {
@@ -113,22 +116,47 @@ radioButtons.forEach((radio) => {
   });
 });
 
-// Start Button et Final Submit
+// ////////////////////////////////////////////////////////Module 3////////////////////////////////////////////////////////
+
+const module3App = () => {
+  if (firstExeModule3 == false) {
+    return;
+  } else {
+    firstExeModule3 = false;
+    let unite = totalSeconds % 10;
+    if (unite === 5) {
+      module3IsSolved = true;
+    } else {
+      return;
+    }
+  }
+};
+
+module3Submit.addEventListener("click", () => {
+  module3App();
+  module3Light.style.background = "yellow";
+});
+
+// ////////////////////////////////////////////////////////Start Button et Final Submit////////////////////////////////////////////////////////
 startBtn.addEventListener("click", () => {
   if (firstExeStart) {
     firstExeStart = false;
     module1App();
-    [module1.style.opacity, module2.style.opacity] = [1, 1];
+    [module1.style.opacity, module2.style.opacity, module3.style.opacity] = [
+      1, 1, 1,
+    ];
     clearTimeout(timeout);
     timeDisplay();
     audio1.play();
-    startBtn.textContent = "Rechargez la page (f5) pour recommencer";
+    startBtn.textContent = "Rechargez la page pour recommencer";
+  } else {
+    location.reload();
   }
 });
 
 finalSubmit.addEventListener("click", () => {
   if (firstExeFinal) {
-    firstExeFinal = true;
+    firstExeFinal = false;
     audio1.pause();
 
     if (

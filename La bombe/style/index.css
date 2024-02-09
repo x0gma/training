@@ -145,6 +145,47 @@ header span {
       -ms-flex-align: center;
           align-items: center;
 }
+.bomb-container .module-container .module3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  opacity: 0;
+}
+.bomb-container .module-container .module3 .module3Light-container {
+  height: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.bomb-container .module-container .module3 .module3Light-container .module3Light {
+  height: 30px;
+  width: 30px;
+  border-radius: 100px;
+  border: 1px solid black;
+}
+.bomb-container .module-container .module3 button {
+  height: 250px;
+  width: 250px;
+  border-radius: 200px;
+  background: red;
+  font-size: 2rem;
+  color: white;
+}
 
 .defuseBtn-container {
   display: -webkit-box;
